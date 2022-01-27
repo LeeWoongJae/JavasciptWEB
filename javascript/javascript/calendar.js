@@ -8,7 +8,7 @@ document.write(`</br>`);
 
 // 밀어버리기 (실제달력화)
 for(let i=0;i<6;i++){
-    document.write(`<div class="day"></div>`);
+    document.write(`<div class="day">&nbsp;</div>`);
 }
 
 
