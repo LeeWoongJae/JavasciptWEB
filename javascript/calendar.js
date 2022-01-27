@@ -5,16 +5,17 @@ document.write(`<div class="container">`);
         document.write(`<div class="days">${day}</div>`);
     }
 document.write(`</br>`);
-
+var month = 1;
 // 밀어버리기 (실제달력화)
-for(let i=0;i<6;i++){
-    document.write(`<div class="day">&nbsp;</div>`);
+for(let i=0;i<getMonthDay(month);i++){
+    document.write(`<div class="day">-</div>`);
 }
-
-
-    for (let i = 1; i <= 31; i++) {
+for(let i=0;i<)
+// 날짜 보여주는 부분(일수)
+    for (let i = 1; i <= getLastDate(month); i++) {// 1월의 마지막날까지 스캔
+        
         document.write(`<div class="day">${i}</div>`);
-        if ((i+6) % 7 == 0) {
+        if ((i+getMonthDay(month)) % 7 == 0) {
             document.write(`<br/>`);
         }
     }
