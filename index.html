@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <script src="javascript/gugudan.js"></script>
+    <!-- 경로를 상세히 지정해주어야 404error가 나오지 않이 -->
+    <!-- 기본은 D:\ web 이니까 -->
+    <style>
+        * {
+            margin: 0;
+
+        }
+
+        table {
+            /* border: 1px solid grey; */
+            border-collapse: collapse;
+        }
+
+        .row {
+            border: 1px dotted red;
+            border-collapse: collapse;
+        }
+
+        tr>td:nth-child(1) {
+            border-top: 1px dotted red;
+            border-left: 1px dotted red;
+            border-bottom: 1px dotted red;
+        }
+
+        .row>td:nth-child(5) {
+            border-top: 1px dotted red;
+            border-right: 1px dotted red;
+            /* border-left: 1px solid red; */
+            border-bottom: 1px dotted red;
+
+        }
+
+        .row>td:not(:nth-child(1)),
+        .row>td:not(:nth-child(5)) {
+            border-top: 1px dotted red;
+            border-bottom: 1px dotted red;
+        }
+
+        div {
+            border: 1px solid red;
+            display: inline;
+            float: left;
+            margin: 3px;
+            text-align: center;
+            padding:10px;
+        }
+
+        span {
+            border: 1px solid blue;
+            display: block;
+            clear: left;
+            ;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <P>2X1=2</P>
+        <P>2X2=4</P>
+        <P>2X3=6</P>
+
+    </div>
+    <div>
+        <P>3X1=3</P>
+        <P>3X2=6</P>
+
+    </div>
+    <div>
+        <P>4X1=4</P>
+        <P>5X1=5</P>
+
+    </div>
+
+    <span>1</span>
+    <span>2</span>
+    <span>3</span>
+    <span>4</span>
+    <span>5</span>
+    <span>6</span><span>7</span><span>8</span><span>9</span>
+
+
+</body>
+
+</html>
