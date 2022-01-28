@@ -10,7 +10,7 @@ var month = 1;
 for(let i=0;i<getMonthDay(month);i++){
     document.write(`<div class="day">-</div>`);
 }
-for(let i=0;i<)
+// for(let i=0;i<)
 // 날짜 보여주는 부분(일수)
     for (let i = 1; i <= getLastDate(month); i++) {// 1월의 마지막날까지 스캔
         
