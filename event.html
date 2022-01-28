@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event.html</title>
+    <style>
+        #show{
+            width:90%;
+            height:50vh;
+            /* view height  percent랑 비슷*/
+            background-color:tomato;
+            margin: 10px auto;
+            
+        }
+        button{
+            background-color: burlywood;
+            color:black;
+            padding : 5px 5px;
+            
+        }
+        .clicked{
+            color:chartreuse;
+        }
+        
+    </style>
+</head>
+<body>
+    
+    <button onclick="turnOnFunc()">Turn On</button>
+    
+    <img src="http://www.w3schools.com/js/pic_bulboff.gif">
+    
+    <button onclick="turnOffFunc()">Turn Off</button>
+
+    <P></P>
+
+
+    <button class="color">Yellow</button>
+    <button class="color">Green</button>
+    <button class="color">Red</button>
+    <button class="color">Blue</button>
+    <button class="color">Grey</button>
+    <button class="color">Orange</button>
+
+
+    <div id="show"></div>
+        <script src="./javascript/event.js"></script>
+        
+
+
+</body>
+</html>
