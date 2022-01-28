@@ -6,11 +6,9 @@ function Member(first_name, last_name, age, score) {
     this.score = score;
     this.fullName = function () {
             return this.last_name + ' ' + this.first_name;
-
         },
         this.isAdult = function () {
             return this.age >= 20 ? true : false;
-
         }
 }
 var member1 = new Member('길동', '홍', 18, 77);
@@ -18,7 +16,7 @@ var member2 = new Member('익수', '광', 25, 60);
 var member3 = new Member('chanHO', 'Park', 44, 70);
 var members = [member1, member2, member3, new Member('chanHO', 'choi', 19, 60)];
 
-console.log(member1.first_name, member1.last_name, member1.fullName);
+console.log(member1.first_name, member1.last_name, member1.fullName());
 
 
 
@@ -41,7 +39,9 @@ for (let member of members) {
 
     table += '<tr>';
 
-    table += `<td>${member['last_name']} ${member.first_name}</td>`;
+    // table += `<td>${member['last_name']} ${member.first_name}</td>`;
+    table += `<td>${member.fullName()}</td>`;
+
     table += `<td>${member['age']}</td>`;
     table += `<td>${member.score}</td>`;
     table += `<td>${member.isAdult() ? '성인' : '청소년'}</td>`;

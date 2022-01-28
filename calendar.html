@@ -1,48 +1,87 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="javascript/function1.js"></script>
     <script src="javascript/calendar.js"></script>
-    
+    <!-- <script>
+        function getMonthDay(year, month) {
+            var tMonth = month - 1; //시스템상은 8이어야함으로 -1 연산 0~11까지 존재
+            var today = new Date(year, tMonth, tDate); //현재 시점으로 DATE OBJECT
+
+            return today.getDay();//월의 시작일의 요일정보를 가져오기위해
+
+        }
+
+        function getLastDate(year, month){
+        var lastDate = new Date(year, tMonth, tDate).getDate(); //현재 시점으로 DATE OBJECT
+            return lastDate;//해당 달의 마지막날을 가져오기위해
+        }
+
+
+
+
+
+
+        var year = 2020;
+        var month = 9; //사용자가 9월을 지정 => 9월
+        var tMonth = month - 1; //시스템상은 8이어야함으로 -1 연산 0~11까지 존재
+        var tDate = 1;
+
+        var today = new Date(year, tMonth, tDate); //현재 시점으로 DATE OBJECT
+
+        var dayInfo = today.getDay();
+        var lastDate = new Date(year, tMonth, tDate - 1).getDate(); // 2020 8 0 (9월의 마지막날의 정보를 가져온다)
+
+        console.log(today.getFullYear()); //이번년도
+        console.log(today.getMonth()); //이번달 0~11 까지로 표기된다 0은 1월, 11은 사실상 12월
+        console.log(today.getDate()); //오늘날짜
+        console.log(today.getDay()); //요일
+    </script> -->
 
     <style>
-        *{
+        * {
             font-size: 20px;
             box-sizing: border-box;
         }
-        .container{
-            border:1px solid green;
-            width:80%;
-            margin:10px auto;
+
+        .container {
+            border: 1px solid green;
+            width: 80%;
+            margin: 10px auto;
         }
-        .container>div{
-            width:50px;
-            height:100px;
-            background-color:yellow;
-            margin:3px 3px;
-            padding:0 2px;
-            text-align:center;
-            line-height:100px;
+
+        .container>div {
+            width: 50px;
+            height: 100px;
+            background-color: yellow;
+            margin: 3px 3px;
+            padding: 0 2px;
+            text-align: center;
+            line-height: 100px;
             /* 전체적 높이랑 라인(내용)의 높이를 같은크기로 주면 적당히 정렬이된다 */
-            display:inline-block;
+            display: inline-block;
             /* 공간이 있으면 자동적으로 정렬되고 없으면 줄바꿈 */
 
-        
-        }.container>.day{
+
+        }
+
+        .container>.day {
             background-color: rgb(121, 89, 95);
         }
-        .container>.days{
-            background-color:red;
-            font-size:1.3em;
+
+        .container>.days {
+            background-color: red;
+            font-size: 1.3em;
             color: white;
-            
+
         }
     </style>
     <title>Document</title>
 </head>
+
 <body>
     <!-- <div class="container">
         <div class="day">1</div>
@@ -78,4 +117,5 @@
         <div class="day">31</div>
     </div> -->
 </body>
+
 </html>
