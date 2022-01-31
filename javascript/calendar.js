@@ -1,23 +1,25 @@
 // calendar.js
 
+var month = 2; // 보고싶은 달 지정
+var year = 2022;
+
+
+
 function getMonthDay(year, month) {
     var tMonth = month - 1; //시스템상은 8이어야함으로 -1 연산 0~11까지 존재
-    var today = new Date(year, tMonth, tDate); //현재 시점으로 DATE OBJECT
+    var today = new Date(year, tMonth, 1); //현재 시점으로 DATE OBJECT
 
     return today.getDay();//월의 시작일의 요일정보를 가져오기위해
 
 }
 
 function getLastDate(year, month){
-var lastDate = new Date(year, tMonth, tDate).getDate(); //현재 시점으로 DATE OBJECT
+var lastDate = new Date(year, month, 0).getDate(); //현재 시점으로 DATE OBJECT
     return lastDate;//해당 달의 마지막날을 가져오기위해
 }
 
 
 
-
-var month = 1; // 보고싶은 달 지정
-var year = 2022;
 
 document.write(`<h1>${year}년 ${month}월</h1>`);
 
