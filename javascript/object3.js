@@ -208,3 +208,6 @@ for (let j = 0; j < sortNum.length - 1; j++) {
     }
 }
 console.log(sortNum);
+let newSortNum = sortNum.slice(1,3);
+console.log(newSortNum);
+fruits.slice(1,3);
