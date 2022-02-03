@@ -17,36 +17,36 @@ console.log(result);
 
 function getMonthDay(month) { //2022년만 가능한 달력
     // 1일의 요일정보 반환
-    
+
     // 일:0 월:1 화2 수3 목4 금5 토:6
 
 
     var startVal = 6; //6+31 /7 나누면 나머지에대해서 다음달의 시작일을 셋팅
     var point = []; //[6 , 2, 2,...] 달의 시작되는 일의 요일을 셋팅 ex) 일요일이면 0, 토요일이면 6
     var prevVal = startVal; //전달의 시작일을 계속해서 갱신
-    for(let i=0;i<12;i++){
-        if(i>0){
+    for (let i = 0; i < 12; i++) {
+        if (i > 0) {
             prevVal = (prevVal + getLastDate(i) % 7);
         }
         point[i] = prevVal;
     }
     console.log(point);
-    return point[month-1];
+    return point[month - 1];
 }
 
-    // var monthDay = 0;
-    // if(month ==1){
-    //     monthDay =6;
-    // }else if(month==2){
-    //     monthDay=2;
-    // }else if(month==3){
-    //     monthDay=2;
-    // }else if(month=4){
-    //     monthDay=5;
-    // }else{
-    //     monthDay=0;
-    // }
-    // return monthDay;
+var monthDay = 0;
+if (month == 1) {
+    monthDay = 6;
+} else if (month == 2) {
+    monthDay = 2;
+} else if (month == 3) {
+    monthDay = 2;
+} else if (month = 4) {
+    monthDay = 5;
+} else {
+    monthDay = 0;
+}
+// return monthDay;
 
 
 
