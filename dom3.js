@@ -64,31 +64,16 @@ function makeRow(obj) {
 }
 
 
-const members = [{
-        fName: '홍길동',
-        age: 20,
-        score: 60
-    },
-    {
-        fName: '콩길동',
-        age: 22,
-        score: 50
-    },
-    {
-        fName: '박길동',
-        age: 33,
-        score: 99
-    },
-    {
-        fName: '김길동',
-        age: 50,
-        score: 100
-    }
+const members = [
+    {fName: '홍길동',age: 20,score: 60},
+    {fName: '콩길동',age: 22,score: 50},
+    {fName: '박길동',age: 33,score: 99},
+    {fName: '김길동',age: 50,score: 100}
 
 ];
 let table = document.createElement('table');
 
-table.setAttribute('border', '1');
+table.setAttribute('border', '1');c
 
 table.appendChild(makeHead());
 

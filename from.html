@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form.html</title>
+</head>
+<body>
+    <h3>Form practice</h3>
+    <form name = "myForm"action="index.html">
+        NAME : <input type="text" name="name1">
+        AGE : <input type="number" name="age1">
+
+        <input type="submit" value="전송">
+    </form>
+    <script>
+        document.querySelector('form[name="myForm"]').addEventListener('submit', function(){
+            console.log(this);
+            event.preventDefault();//해당하는 이벤트를 잠시 중단하고 그이후를 내가 제어하겠다
+            console.log(this.querySelector('[name="name1"]').value); //여기서 this 는 form 태그
+            console.log(this.querySelector('[name="age1"]').value); 
+            
+            var name = this.querySelector('[name="name1"]').value;
+            var age = this.querySelector('[name="age1"]').value;
+            
+            //값을 validation : 이름 : 2글자보다 작고 20보다 적거나 30보다 크면
+            if(name.length <2 || age >=30 || age <20){
+                alert('입력한 값을 확인해주세요')
+                return;
+            }
+            this.action = 'get.html';
+            this.submit();
+
+        })
+    </script>
+</body>
+</html>

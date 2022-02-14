@@ -35,5 +35,4 @@ for(let num of start_num){
 //     for(let j=1;j<=colNum;j++){
 //         document.write(`<p>${i}행+${j}열${i*j+j}</p>`);
 //     }
-}
 
