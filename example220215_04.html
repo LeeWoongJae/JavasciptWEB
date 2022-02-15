@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04.html</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        // console.log(today.getDay());
+        function ymd(day){
+            //2022-02-14 포맷으로 출력하는 함수 작성
+           return day.getFullYear() +"-0"+day.getDay() +"-"+ (day.getDate()-1);
+        }
+        function ymd_hms(datetime){
+            //2022-02-14 09:12:05 포맷으로 출력하는 함수 작성
+            datetime.setHours(9);
+            datetime.setMinutes(12);
+            datetime.setSeconds(5);
+            return ymd(datetime)+" 0"+datetime.getHours()+":"+datetime.getMinutes()+":0"+datetime.getSeconds();
+        }
+        console.log(ymd(today)); 
+        // 현재날짜를 yyyy-mm-dd 형식으로 출력
+        console.log(ymd_hms(today)); 
+        // 현재날짜를 yyyy-mm-dd hh:mm:ss 형식으로 출력
+
+
+    </script>
+</body>
+</html>

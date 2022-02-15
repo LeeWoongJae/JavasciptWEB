@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>example05.html</title>
+</head>
+<body>
+    <h3>달력</h3>
+    <div id ="show">
+        <table border="1">
+            <thead></thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script>
+        var days = ['일','월','화','수','목','금','토'];
+        function getHead(){
+            //table의 thead 정보를 생성해주는 함수
+            var thead = document.createElement('thead');
+            var tr = document.createElement('tr');
+            
+            for(let day of days){
+                var th = document.createElement('th');
+                document.write(`${day}`);
+            }
+            tr.append(th);
+            thead.append(tr);
+            return thead;
+        }
+        function getbody(){
+            //table의 tbody 정보를 생성해주는 함수
+            var tbody = document.createElement('tbody');
+            var tr = document.createElement('tr');
+
+            for(let i=1;i<32;o++){
+                var td = document.createElement('td');
+                document.write(i);
+                // <tr><td>1</td><td>2</td>....7</td></tr><tr><td>8...
+                if(i%7==0){
+                document.createElement('tr');
+                }
+            }
+            tr.append(td);
+            tbody.append(tr);
+            return tbody;
+        }
+
+        var table = document.createElement('table');
+        table.setAttribute('border' , '1');
+
+        table.appendChild(getHead());
+        table.appendChild(getBody());
+
+        document.getElementById('show').appendChild(table);
+    </script>
+</body>
+</html>
