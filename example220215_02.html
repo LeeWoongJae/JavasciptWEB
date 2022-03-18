@@ -12,12 +12,18 @@
         var fruits = ['Apple' , 'Banana' , 'Cherry' , 'Melon'];
         var fruit = prompt('제거할 과일을 입력해주어요');
         for(let i = 0; i<fruits.length;i++){
+ 
+            if(fruits[i]==fruit){
+                delete fruits[i];
+                
+
             if(fruits[i].toLowerCase()==fruit.toLowerCase()){
                 delete fruits[i];
+
             }
         }
         console.log(fruits);
-
+    }
     </script>
 </body>
 </html>
