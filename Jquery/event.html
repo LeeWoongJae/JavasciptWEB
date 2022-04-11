@@ -16,8 +16,38 @@
                 for(let i of data){
                     let $li = $("<li>");
                     $li.html(i);
+                    // 직접이벤트
+                        // $li.on("click" , function(){ // 이런방식보다 그룹이벤트를 선호한다
+                        //     console.log($(this).html()); // $(this) == $li
+                        // })
+
+
+                    // $li.bind("click" , function(){// addEventListener("clikc",function())
+                    //     console.log($(this).html()); // 
+                    // }); 
+                        
                     $("#fruit").append($li);
                 } 
+                // 이벤트 전파 
+                // $("#fruit").bind("click" , function(){
+                //     console.log($(event.target).html());
+                // })
+
+
+                // 그룹 이벤트 (이벤트 위임)
+                // $("#fruit").on("click",'li',function(){
+                //     console.log($(this).html());
+                // });
+
+                // 자바스크립트 그룹이벤트
+                fruit.addEventListener("click" , function(){
+                   
+                    if(event.target.nodeName =="LI"){
+                        console.log(event.target.innerHTML);
+                    }
+                })
+
+
                 </script>
 
 

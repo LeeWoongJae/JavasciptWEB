@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table>
+            <tr>
+                <td id="std">가나</td>
+                <td>55</td>
+                <td>66</td>
+                <td><button class="btn">선택</button></td>
+            </tr>
+            <tr><td>다라</td>
+                <td>60</td>
+                <td>57</td>
+                <td><button class="btn">선택</button></td>
+            </tr>
+            <tr><td>마바</td>
+                <td>66</td>
+                <td>50</td>
+                <td><button class="btn">선택</button></td>
+            </tr>
+            <tr><td>사아</td>
+                <td>88</td>
+                <td>50</td>
+                <td><button class="btn">선택</button></td>
+            </tr>
+
+        </table>
+
+
+
+
+
+
+    </div>
+
+    <script>
+        // 몇번째 버튼이 클릭이 되었는지 일단은 만들어본다
+        $(".btn").bind("click" , function(){
+            alert($(this).html()+"이 클릭 되었습니다");
+            console.log("이름: "+$(this).parent().parent().children().first().html());
+            console.log("국어성적: "+$(this).parent().parent().children().first().next().html());
+            console.log("수학성적: "+$(this).parent().parent().children().first().next().next().html());
+            if($(this).parent().parent().children().first().html() == '가나'){
+            console.log("1번째 tr이 클릭되었습니다!");
+            }else if($(this).parent().parent().children().first().html() == '다라'){
+                console.log("2번째 tr이 클릭되었습니다!");
+            }else if($(this).parent().parent().children().first().html() == '마바'){
+                console.log("3번째 tr이 클릭되었습니다!");
+            }else{
+                console.log("4번째 tr이 클릭되었습니다!");
+            }
+        })
+
+
+    </script>
+
+</body>
+</html>
