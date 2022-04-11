@@ -9,21 +9,20 @@
  width : 300px; height : 200px; }
 </style>
 <script>
-let txtArr = [];
+let txtArr = ['사과'];
 window.onload = function(){ // == $(function(){~~~})
-$(btnAdd).bind("click",funcAdd);
-$(btnDelete).bind("click",funcDelete);
-$(btnSearch).bind("click",funcSearch);
-$(txtFruit).bind("focus", function(){this.select();})
+$("#btnAdd").bind("click",funcAdd);
+$("#btnDelete").bind("click",funcDelete);
+$("#btnSearch").bind("click",funcSearch);
+$("#txtFruit").bind("focus", function(){this.select();})
 }
 function funcAdd(){
 //텍스트필드에 입력한 값을 배열에 추가하고 배열을 div에 출력
-var txtFruit = $("#txtFruit").val();
-div = $("<div>");
-txtArr += txtFruit
-    div.append(txtArr);
-    result.append(div);
-console.log("add");
+let txtFruit = $("#txtFruit").val();
+let div = $("<div>");
+   div.html(txtFruit);
+   $("#result").append(div);
+    console.log("add");
  
 }
 function funcDelete(){
@@ -39,11 +38,17 @@ for(let i of txtArr){
 }
 function funcSearch(){
 //텍스트필드에 입력한 값을 배열에서 검색해서 검색위치를 div출력
-let txtFruit = $("#txtFruit").val();
-for(let i of txtArr){
-    ind = $(i).indexOf(txtFruit);
+txtFruit = $("#txtFruit").val();
+console.log(txtFruit);
+let list = $("#result").children();
+console.log(list);
+for(let i=0;i<=list.length;i++){
+    if(list.eq(i).html() == txtFruit){
+        alert(i);
+    }
 }
-result.append("검색위치 : "+ind);
+
+
     
 
 }
@@ -54,6 +59,8 @@ result.append("검색위치 : "+ind);
 <button type="button" id="btnAdd">추가</button>
 <button type="button" id="btnDelete">삭제</button>
 <button type="button" id="btnSearch">검색</button>
-<div id="result"></div>
+<div id="result">
+    <div></div>
+</div>
 </body>
 </html>
