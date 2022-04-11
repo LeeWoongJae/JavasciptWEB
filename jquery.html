@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+
+    <meta charset="UTF-8">
+      <style>
+    div{font-family: 'Rubik Wet Paint', cursive};
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&display=swap" rel="stylesheet">
+
+    <title>Document</title>
+</head>
+<body>
+    <div id="result"></div>
+
+
+
+
+    <script>
+
+
+            // pNode.innerHTML = "하단div태그추가"
+            // pNode.setAttribute("id" , "content")
+            // pNode.setAttribute("data-id" , "id1")
+            // pNode.classList.add("bd");
+            // pNode.classList.add("lg");
+            // pNode.style.fontWeight = "200";
+            // pNode.style.color = "blue";
+            // pNode.innerHTML+="&nbsp;<strong><i>가나다라</i></strong>"
+            // content.append(pNode);
+
+        let $pNode = $("<p>");
+            $pNode.attr("id" , "content");
+            $pNode.data("id", "id1");
+            $pNode.addClass("bd");
+            $pNode.addClass("lg");
+            $pNode.css("fontWeight" , "200");
+            $pNode.css("color" , "purple");
+            $pNode.html("&nbsp;<strong><i>가나다라</i></strong>");
+            $("#result").append($pNode);
+    </script>
+
+
+</body>
+</html>
