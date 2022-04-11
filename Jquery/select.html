@@ -7,16 +7,31 @@
     <title>Document</title>
 </head>
 <body>
-    <select name="" id="fruit">
-        <option value="banana">바나나</option>
-        <option value="apple">사과</option>
+    <select name="" id="fruit" size="10" multiple>
+        <option value="banana" selected>바나나</option>
+        <option value="apple" selected>사과</option>
         <option value="kiwi">키위</option>
     </select>
     <script>
         //selectedIndex
         // options
         // add(), remove()
-
+        function confirm(){
+            // 선택된 옵션의 값을 String 으로 생성;
+            var arr = [];
+            var fo = fruit.options;
+            for(let i of fo){
+                if(i.selected){
+                    console.log(i);
+                    arr.push(i.text);
+                }
+            }
+            // join
+            let str = "";
+            str = arr.join();
+            console.log(str);
+        }
+        confirm();
 
     </script>
 </body>

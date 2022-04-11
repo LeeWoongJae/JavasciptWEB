@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>이름</td>
+                <th>국어</td>
+                <th>영어</td>
+                <th>합계</td>    
+            </tr>
+        </thead>
+        <tr>
+            <td id="std">철수</td>
+            <td>90</td>
+            <td>70</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>영희</td>
+            <td>100</td>
+            <td>50</td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>개똥</td>
+            <td>90</td>
+            <td>60</td>
+            <td>&nbsp;</td>
+        </tr>
+    </table> 
+    <div id="result">국어<span id="kor"></span></div>  
+    <div id="result">영어<span id="eng"></span></div>
+    <script>
+        //$("tbody tr td:nth-child(2)") ==> 국어점수td
+        var a = $("tbody tr td:nth-child(2)").html();
+        var b = $("tbody tr:nth-child(2) td:nth-child(2)").html();
+        var c = $("tbody tr:nth-child(3) td:nth-child(2)").html();
+
+
+        kor.innerText=Number(a)+Number(b)+Number(c) // 국어 총 합
+        
+        var d = $("tbody tr td:nth-child(3)").html();
+        var e = $("tbody tr:nth-child(2) td:nth-child(3)").html();
+        var f = $("tbody tr:nth-child(3) td:nth-child(3)").html();
+
+        eng.innerText=Number(d)+Number(e)+Number(f); // 영어 총 합
+
+        var s1 = Number(a) + Number(d);
+        var s2 = Number(b) + Number(e);
+        var s3 = Number(c) + Number(f);
+
+        $("tbody tr td:nth-child(4)").html(s1)
+        $("tbody tr:nth-child(2) td:nth-child(4)").html(s2);
+        $("tbody tr:nth-child(3) td:nth-child(4)").html(s3);
+
+    </script> 
+</body>
+</html>
