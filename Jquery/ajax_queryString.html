@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
+    <script src="json.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -26,6 +26,7 @@
                 let qs4= `uid=${frm.uid.value}&password=${frm.password.value}&role=${frm.role.value}`
 
                 const qs2 = new URLSearchParams(new FormData(frm)).toString();
+                //URLSearchParams 함수를 사용해서 form양식 데이터를 넘긴다
                 // qs or qs2나 같은 방식으로 넘겨진다  == 결과가 같다
 
                 const qs3 = $('[name="frm"]').serialize();
