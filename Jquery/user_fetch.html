@@ -111,13 +111,13 @@
     tb.addEventListener("click", function(){
         if(event.target.classList.contains("btnDel")){
             userDel(event.target);
-        }else{
-            if(event.target.classList.contains("btnUpd")){
+        }else if(event.target.classList.contains("btnUpd"))
+        {
                 userSelect(event.target);
-            }
-
         }
-    })
+
+        
+    });
 
 
     // 삭제 ajax
